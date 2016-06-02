@@ -12,6 +12,7 @@
 		C7905C431D00850E002627E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7905C411D00850E002627E1 /* Main.storyboard */; };
 		C7905C451D00850E002627E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7905C441D00850E002627E1 /* Assets.xcassets */; };
 		C7905C481D00850E002627E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7905C461D00850E002627E1 /* LaunchScreen.storyboard */; };
+		C7905C501D00870F002627E1 /* ZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7905C4F1D00870F002627E1 /* ZoomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C7905C441D00850E002627E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7905C471D00850E002627E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7905C491D00850E002627E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7905C4F1D00870F002627E1 /* ZoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				C7905C3D1D00850E002627E1 /* AppDelegate.swift */,
 				C7905C3F1D00850E002627E1 /* ViewController.swift */,
 				C7905C411D00850E002627E1 /* Main.storyboard */,
+				C7905C4F1D00870F002627E1 /* ZoomViewController.swift */,
 				C7905C441D00850E002627E1 /* Assets.xcassets */,
 				C7905C461D00850E002627E1 /* LaunchScreen.storyboard */,
 				C7905C491D00850E002627E1 /* Info.plist */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7905C401D00850E002627E1 /* ViewController.swift in Sources */,
+				C7905C501D00870F002627E1 /* ZoomViewController.swift in Sources */,
 				C7905C3E1D00850E002627E1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
