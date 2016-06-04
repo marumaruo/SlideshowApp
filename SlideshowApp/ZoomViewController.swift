@@ -2,7 +2,7 @@
 //  ZoomViewController.swift
 //  SlideshowApp
 //
-//  Created by bc0067042 on 2016/06/03.
+//  Created by bc0067042 on 2016/06/05.
 //  Copyright © 2016年 maru.ishi. All rights reserved.
 //
 
