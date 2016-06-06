@@ -19,7 +19,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        uiImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "imageTapped"))
+//        uiImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "imageTapped"))
+        uiImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTapped)))
         
     }
 
@@ -28,12 +29,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let zoomViewController:ZoomViewController = segue.destinationViewController as! ZoomViewController
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        let zoomViewController:ZoomViewController = segue.destinationViewController as! ZoomViewController
+//    }
     
-    func imageTapped(sender: UITapGestureRecognizer){
-        print(sender)
+    func imageTapped(recognizer: UITapGestureRecognizer){
+//        if let imageView = recognizer.view as? UIImageView {
+//            let image = imageView.image
+//    }
+    
+            let zoomViewController: UIViewController = ZoomViewController()
+            self.presentViewController(zoomViewController, animated: true, completion: nil)
+            
+            
+            
+        
     }
 
 }
