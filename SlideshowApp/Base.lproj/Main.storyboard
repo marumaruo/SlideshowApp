@@ -88,38 +88,19 @@
                                     <segue destination="mwL-aR-cdK" kind="unwind" unwindAction="unwind:" id="pdx-YH-KZh"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPj-Ye-iPm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="un2-J7-gw1">
                                 <rect key="frame" x="0.0" y="50" width="600" height="550"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="un2-J7-gw1">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="un2-J7-gw1" firstAttribute="leading" secondItem="zPj-Ye-iPm" secondAttribute="leading" id="9af-2f-NOY"/>
-                                    <constraint firstItem="un2-J7-gw1" firstAttribute="centerY" secondItem="zPj-Ye-iPm" secondAttribute="centerY" id="JXE-A2-pZ2"/>
-                                    <constraint firstAttribute="trailing" secondItem="un2-J7-gw1" secondAttribute="trailing" id="VzQ-8r-bFQ"/>
-                                    <constraint firstItem="un2-J7-gw1" firstAttribute="top" secondItem="zPj-Ye-iPm" secondAttribute="top" id="ZAv-ZC-hgO"/>
-                                    <constraint firstItem="un2-J7-gw1" firstAttribute="centerX" secondItem="zPj-Ye-iPm" secondAttribute="centerX" id="mKu-B2-qJ3"/>
-                                    <constraint firstAttribute="bottom" secondItem="un2-J7-gw1" secondAttribute="bottom" id="puW-C7-Yev"/>
-                                </constraints>
-                            </scrollView>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zPj-Ye-iPm" firstAttribute="top" secondItem="MsR-Zn-8mY" secondAttribute="bottom" constant="10" id="Jba-2c-r16"/>
-                            <constraint firstItem="zPj-Ye-iPm" firstAttribute="leading" secondItem="niz-3a-yP8" secondAttribute="leading" id="Zbk-b0-OeM"/>
+                            <constraint firstAttribute="bottom" secondItem="un2-J7-gw1" secondAttribute="bottom" id="8c1-ng-RRA"/>
+                            <constraint firstItem="un2-J7-gw1" firstAttribute="leading" secondItem="niz-3a-yP8" secondAttribute="leading" id="Ct6-W9-rrO"/>
+                            <constraint firstAttribute="trailing" secondItem="un2-J7-gw1" secondAttribute="trailing" id="USX-Hk-xnD"/>
                             <constraint firstItem="MsR-Zn-8mY" firstAttribute="leading" secondItem="niz-3a-yP8" secondAttribute="leading" constant="10" id="azr-ZI-1HT"/>
                             <constraint firstItem="MsR-Zn-8mY" firstAttribute="top" secondItem="niz-3a-yP8" secondAttribute="top" constant="10" id="feb-ZN-IkB"/>
-                            <constraint firstAttribute="bottom" secondItem="zPj-Ye-iPm" secondAttribute="bottom" id="mWp-TL-ylx"/>
-                            <constraint firstItem="zPj-Ye-iPm" firstAttribute="top" secondItem="niz-3a-yP8" secondAttribute="top" constant="60" id="rxC-Fd-Vlr"/>
-                            <constraint firstAttribute="trailing" secondItem="zPj-Ye-iPm" secondAttribute="trailing" id="teq-Zy-I2c"/>
+                            <constraint firstItem="un2-J7-gw1" firstAttribute="top" secondItem="MsR-Zn-8mY" secondAttribute="bottom" constant="10" id="spY-cn-fd5"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="rxC-Fd-Vlr"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="uiImageView" destination="un2-J7-gw1" id="dBy-9B-yfw"/>
