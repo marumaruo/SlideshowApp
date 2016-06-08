@@ -38,11 +38,12 @@ class ViewController: UIViewController {
 //            let image = imageView.image
 //    }
     
-            let zoomViewController: UIViewController = ZoomViewController()
-            self.presentViewController(zoomViewController, animated: true, completion: nil)
-            
-            
-            
+//            let zoomViewController: UIViewController = ZoomViewController()
+//            self.presentViewController(zoomViewController, animated: true, completion: nil)
+
+        let storyboard: UIStoryboard = self.storyboard!
+        let zoomViewController = storyboard.instantiateViewControllerWithIdentifier("zoom") as! ZoomViewController
+        self.presentViewController(zoomViewController, animated: true, completion: nil)
         
     }
 

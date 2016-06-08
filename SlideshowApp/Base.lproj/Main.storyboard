@@ -61,7 +61,7 @@
         <!--Zoom View Controller-->
         <scene sceneID="Nky-TZ-8vN">
             <objects>
-                <viewController id="o2f-p5-ADg" customClass="ZoomViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="zoom" id="o2f-p5-ADg" customClass="ZoomViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JRU-Gc-wuT"/>
                         <viewControllerLayoutGuide type="bottom" id="rSm-aL-jbI"/>
