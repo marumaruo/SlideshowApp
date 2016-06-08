@@ -28,14 +28,23 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGq-1p-RiI">
                                 <rect key="frame" x="205" y="470" width="30" height="30"/>
                                 <state key="normal" title="&lt;"/>
+                                <connections>
+                                    <action selector="prev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ImP-tS-vbW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0c-iA-BG8">
                                 <rect key="frame" x="285" y="470" width="30" height="30"/>
                                 <state key="normal" title="再生"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eyl-cj-ZB5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0R-uE-oHF">
                                 <rect key="frame" x="365" y="470" width="30" height="30"/>
                                 <state key="normal" title="&gt;"/>
+                                <connections>
+                                    <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yai-MX-dgd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -51,6 +60,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="playButton" destination="O0c-iA-BG8" id="6RC-QQ-pYY"/>
                         <outlet property="uiImageView" destination="V6D-wb-G1d" id="c5c-uy-vIq"/>
                         <segue destination="o2f-p5-ADg" kind="show" identifier="toZoomViewController" id="EZb-rN-DeG"/>
                     </connections>

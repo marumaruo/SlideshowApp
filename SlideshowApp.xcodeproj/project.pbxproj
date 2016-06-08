@@ -13,6 +13,12 @@
 		C7905C451D00850E002627E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7905C441D00850E002627E1 /* Assets.xcassets */; };
 		C7905C481D00850E002627E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7905C461D00850E002627E1 /* LaunchScreen.storyboard */; };
 		C7A3D7351D03278700C3E6B7 /* ZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A3D7341D03278700C3E6B7 /* ZoomViewController.swift */; };
+		C7EC95C71D08123F00BCA2A2 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C7EC95C11D08123F00BCA2A2 /* 1.jpg */; };
+		C7EC95C81D08123F00BCA2A2 /* 2.gif in Resources */ = {isa = PBXBuildFile; fileRef = C7EC95C21D08123F00BCA2A2 /* 2.gif */; };
+		C7EC95C91D08123F00BCA2A2 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C7EC95C31D08123F00BCA2A2 /* 3.jpg */; };
+		C7EC95CA1D08123F00BCA2A2 /* 4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C7EC95C41D08123F00BCA2A2 /* 4.jpeg */; };
+		C7EC95CB1D08123F00BCA2A2 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C7EC95C51D08123F00BCA2A2 /* 5.jpg */; };
+		C7EC95CC1D08123F00BCA2A2 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = C7EC95C61D08123F00BCA2A2 /* 6.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		C7905C471D00850E002627E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7905C491D00850E002627E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7A3D7341D03278700C3E6B7 /* ZoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomViewController.swift; sourceTree = "<group>"; };
+		C7EC95C11D08123F00BCA2A2 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		C7EC95C21D08123F00BCA2A2 /* 2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 2.gif; sourceTree = "<group>"; };
+		C7EC95C31D08123F00BCA2A2 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		C7EC95C41D08123F00BCA2A2 /* 4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpeg; sourceTree = "<group>"; };
+		C7EC95C51D08123F00BCA2A2 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		C7EC95C61D08123F00BCA2A2 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +75,22 @@
 				C7905C441D00850E002627E1 /* Assets.xcassets */,
 				C7905C461D00850E002627E1 /* LaunchScreen.storyboard */,
 				C7905C491D00850E002627E1 /* Info.plist */,
+				C7EC95C01D0811FA00BCA2A2 /* img */,
 			);
 			path = SlideshowApp;
+			sourceTree = "<group>";
+		};
+		C7EC95C01D0811FA00BCA2A2 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				C7EC95C11D08123F00BCA2A2 /* 1.jpg */,
+				C7EC95C21D08123F00BCA2A2 /* 2.gif */,
+				C7EC95C31D08123F00BCA2A2 /* 3.jpg */,
+				C7EC95C41D08123F00BCA2A2 /* 4.jpeg */,
+				C7EC95C51D08123F00BCA2A2 /* 5.jpg */,
+				C7EC95C61D08123F00BCA2A2 /* 6.png */,
+			);
+			name = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +152,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7905C481D00850E002627E1 /* LaunchScreen.storyboard in Resources */,
+				C7EC95CB1D08123F00BCA2A2 /* 5.jpg in Resources */,
+				C7EC95C81D08123F00BCA2A2 /* 2.gif in Resources */,
+				C7EC95CC1D08123F00BCA2A2 /* 6.png in Resources */,
+				C7EC95C71D08123F00BCA2A2 /* 1.jpg in Resources */,
+				C7EC95C91D08123F00BCA2A2 /* 3.jpg in Resources */,
+				C7EC95CA1D08123F00BCA2A2 /* 4.jpeg in Resources */,
 				C7905C451D00850E002627E1 /* Assets.xcassets in Resources */,
 				C7905C431D00850E002627E1 /* Main.storyboard in Resources */,
 			);
