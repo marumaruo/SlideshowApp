@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     @IBAction func unwind(segue: UIStoryboardSegue){
     }
+    
+    var timer : NSTimer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,9 @@ class ViewController: UIViewController {
         
 //        uiImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "imageTapped"))
         uiImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTapped)))
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
+
         
     }
 
@@ -46,6 +51,10 @@ class ViewController: UIViewController {
         self.presentViewController(zoomViewController, animated: true, completion: nil)
         
     }
-
+    
+    func onTimer(){
+        //ここが実行されます
+        print("時間です")
+    }
 }
 
