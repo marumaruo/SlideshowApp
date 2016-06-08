@@ -10,10 +10,16 @@ import UIKit
 
 class ZoomViewController: UIViewController {
 
+    var image: UIImage!
+
+    @IBOutlet weak var uiImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        uiImageView.image = image
     }
 
     override func didReceiveMemoryWarning() {

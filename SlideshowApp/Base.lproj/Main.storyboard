@@ -17,30 +17,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V6D-wb-G1d">
-                                <rect key="frame" x="150" y="150" width="300" height="300"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V6D-wb-G1d">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="Ftb-6B-PNW"/>
-                                    <constraint firstAttribute="width" constant="300" id="UZp-Aw-cBE"/>
+                                    <constraint firstAttribute="height" constant="200" id="Ftb-6B-PNW"/>
+                                    <constraint firstAttribute="width" constant="200" id="UZp-Aw-cBE"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGq-1p-RiI">
-                                <rect key="frame" x="205" y="470" width="30" height="30"/>
+                                <rect key="frame" x="205" y="420" width="30" height="30"/>
                                 <state key="normal" title="&lt;"/>
                                 <connections>
                                     <action selector="prev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ImP-tS-vbW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0c-iA-BG8">
-                                <rect key="frame" x="285" y="470" width="30" height="30"/>
+                                <rect key="frame" x="285" y="420" width="30" height="30"/>
                                 <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eyl-cj-ZB5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0R-uE-oHF">
-                                <rect key="frame" x="365" y="470" width="30" height="30"/>
+                                <rect key="frame" x="365" y="420" width="30" height="30"/>
                                 <state key="normal" title="&gt;"/>
                                 <connections>
                                     <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yai-MX-dgd"/>
@@ -60,7 +59,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nextButton" destination="G0R-uE-oHF" id="UJo-34-EE5"/>
                         <outlet property="playButton" destination="O0c-iA-BG8" id="6RC-QQ-pYY"/>
+                        <outlet property="prevButton" destination="EGq-1p-RiI" id="PI9-Yc-1ND"/>
                         <outlet property="uiImageView" destination="V6D-wb-G1d" id="c5c-uy-vIq"/>
                         <segue destination="o2f-p5-ADg" kind="show" identifier="toZoomViewController" id="EZb-rN-DeG"/>
                     </connections>
@@ -80,25 +81,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="un2-J7-gw1">
-                                <rect key="frame" x="180" y="214" width="240" height="128"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsR-Zn-8mY">
-                                <rect key="frame" x="283" y="365" width="34" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsR-Zn-8mY">
+                                <rect key="frame" x="10" y="10" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="mwL-aR-cdK" kind="unwind" unwindAction="unwind:" id="pdx-YH-KZh"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPj-Ye-iPm">
+                                <rect key="frame" x="0.0" y="50" width="600" height="550"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="un2-J7-gw1">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="un2-J7-gw1" firstAttribute="leading" secondItem="zPj-Ye-iPm" secondAttribute="leading" id="9af-2f-NOY"/>
+                                    <constraint firstItem="un2-J7-gw1" firstAttribute="centerY" secondItem="zPj-Ye-iPm" secondAttribute="centerY" id="JXE-A2-pZ2"/>
+                                    <constraint firstAttribute="trailing" secondItem="un2-J7-gw1" secondAttribute="trailing" id="VzQ-8r-bFQ"/>
+                                    <constraint firstItem="un2-J7-gw1" firstAttribute="top" secondItem="zPj-Ye-iPm" secondAttribute="top" id="ZAv-ZC-hgO"/>
+                                    <constraint firstItem="un2-J7-gw1" firstAttribute="centerX" secondItem="zPj-Ye-iPm" secondAttribute="centerX" id="mKu-B2-qJ3"/>
+                                    <constraint firstAttribute="bottom" secondItem="un2-J7-gw1" secondAttribute="bottom" id="puW-C7-Yev"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zPj-Ye-iPm" firstAttribute="top" secondItem="MsR-Zn-8mY" secondAttribute="bottom" constant="10" id="Jba-2c-r16"/>
+                            <constraint firstItem="zPj-Ye-iPm" firstAttribute="leading" secondItem="niz-3a-yP8" secondAttribute="leading" id="Zbk-b0-OeM"/>
+                            <constraint firstItem="MsR-Zn-8mY" firstAttribute="leading" secondItem="niz-3a-yP8" secondAttribute="leading" constant="10" id="azr-ZI-1HT"/>
+                            <constraint firstItem="MsR-Zn-8mY" firstAttribute="top" secondItem="niz-3a-yP8" secondAttribute="top" constant="10" id="feb-ZN-IkB"/>
+                            <constraint firstAttribute="bottom" secondItem="zPj-Ye-iPm" secondAttribute="bottom" id="mWp-TL-ylx"/>
+                            <constraint firstItem="zPj-Ye-iPm" firstAttribute="top" secondItem="niz-3a-yP8" secondAttribute="top" constant="60" id="rxC-Fd-Vlr"/>
+                            <constraint firstAttribute="trailing" secondItem="zPj-Ye-iPm" secondAttribute="trailing" id="teq-Zy-I2c"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="rxC-Fd-Vlr"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="uiImageView" destination="un2-J7-gw1" id="dBy-9B-yfw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyV-Cn-2ED" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="mwL-aR-cdK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="662" y="698"/>
+            <point key="canvasLocation" x="455" y="1136"/>
         </scene>
     </scenes>
 </document>

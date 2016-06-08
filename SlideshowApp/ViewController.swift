@@ -23,6 +23,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var uiImageView: UIImageView!
     
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var prevButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    
     
     @IBAction func unwind(segue: UIStoryboardSegue){
     }
@@ -44,9 +47,25 @@ class ViewController: UIViewController {
     @IBAction func play(sender: AnyObject) {
         if playing {
             playButton.setTitle("再生", forState: UIControlState.Normal)
+            prevButton.enabled = true
+            nextButton.enabled = true
+            prevButton.titleForState(UIControlState.Normal)
+            nextButton.titleForState(UIControlState.Normal)
+            timer.invalidate()
+
             playing = false
+            
+            
+            
         } else {
             playButton.setTitle("停止", forState: UIControlState.Normal)
+            prevButton.enabled = false
+            nextButton.enabled = false
+                prevButton.titleForState(UIControlState.Disabled)
+            nextButton.titleForState(UIControlState.Disabled)
+
+            timer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
+            
         playing = true}
     }
     
@@ -69,7 +88,6 @@ class ViewController: UIViewController {
 //        uiImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "imageTapped"))
         uiImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTapped)))
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
 
         
     }
@@ -90,16 +108,32 @@ class ViewController: UIViewController {
     
 //            let zoomViewController: UIViewController = ZoomViewController()
 //            self.presentViewController(zoomViewController, animated: true, completion: nil)
+        
+        if playing {
+            playButton.setTitle("再生", forState: UIControlState.Normal)
+            prevButton.enabled = true
+            nextButton.enabled = true
+            prevButton.titleForState(UIControlState.Normal)
+            nextButton.titleForState(UIControlState.Normal)
+            timer.invalidate()
+        
+            playing = false
+        }
 
         let storyboard: UIStoryboard = self.storyboard!
         let zoomViewController = storyboard.instantiateViewControllerWithIdentifier("zoom") as! ZoomViewController
+        zoomViewController.image = image[currentPage]
         self.presentViewController(zoomViewController, animated: true, completion: nil)
         
     }
     
     func onTimer(){
-        //ここが実行されます
-        print("時間です")
+        if playing {
+            if currentPage != maxPage {currentPage = currentPage + 1
+            } else {currentPage = 0}
+            
+            uiImageView.image = image[currentPage]
+        }
     }
 }
 
