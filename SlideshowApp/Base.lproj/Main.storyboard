@@ -88,7 +88,7 @@
                                     <segue destination="mwL-aR-cdK" kind="unwind" unwindAction="unwind:" id="pdx-YH-KZh"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="un2-J7-gw1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="un2-J7-gw1">
                                 <rect key="frame" x="0.0" y="50" width="600" height="550"/>
                             </imageView>
                         </subviews>

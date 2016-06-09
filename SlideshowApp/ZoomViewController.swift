@@ -20,6 +20,7 @@ class ZoomViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         uiImageView.image = image
+        uiImageView.layer.position = CGPoint(x: self.view.bounds.width/2, y: self.view.bounds.height/2)
     }
 
     override func didReceiveMemoryWarning() {
